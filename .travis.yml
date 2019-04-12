@@ -13,6 +13,6 @@ services:
 	- docker
 	
 before_install:
-	- docker build -t guruprasaddharmaji/docker-react -f Dockerfile.dev .
+	- docker build -t Guruprasaddharmaji/docker-react -f Dockerfile.dev .
 script:
 	- docker run guruprasaddharmaji/docker-reactm npm run test -- --coverage
