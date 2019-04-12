@@ -1,0 +1,18 @@
+//
+//  .travis.yml
+//  
+//
+//  Created by Guruprasad Dharmaji on 12/04/19.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+sudo: required
+services:
+	- docker
+	
+before_install:
+	- docker build -t guruprasaddharmaji/docker-react -f Dockerfile.dev .
+script:
+	- docker run guruprasaddharmaji/docker-reactm npm run test -- --coverage
